@@ -91,3 +91,35 @@ This detailed explanation covers all aspects of containers and Docker, ensuring 
 
 
 <img width="922" height="376" alt="Screenshot 2026-07-17 231545" src="https://github.com/user-attachments/assets/a16ba9e2-0728-4f49-8b20-445615192153" />
+
+
+
+
+---
+
+# How docker works 
+
+When we run the command 
+```
+docker run -d nginx
+```
+we are asking docker to 
+
+Run the engixn image in detached mode (-d) start the container 
+
+<img width="760" height="290" alt="Screenshot 2026-07-17 233824" src="https://github.com/user-attachments/assets/bbfb62d6-e74c-4af5-b54a-66004ae7d503" />
+
+
+**Explanation of the diagram**
+
+Step #1: Docker cli -->Docker Deamon (API Call)
+
+Step #2: Docker Daemon look for the image locally 
+
+Step #3: Image not found connect to the docker hub
+
+Step #4: Pull image from docker hub
+
+Step #5: Create and start the container 
+
+
