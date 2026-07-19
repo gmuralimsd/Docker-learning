@@ -25,6 +25,12 @@ Here's a list of some useful Docker commands along with their usage and examples
    ```
    Example: `docker ps`
 
+
+   **docker ps -a**: List running containers and stoped containers 
+     ```
+     docker ps
+      ```
+   
 5. **docker images**: List images.
    ```
    docker images
