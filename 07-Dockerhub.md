@@ -9,8 +9,39 @@ Docker Hub is a cloud-based repository provided by Docker Inc., where you can:
 3. **Push Images**: Upload your custom-built images to Docker Hub for sharing and reuse.
 
 ---
+### **building an image using dockerfile**
+```
+docker build -t discoverdevops/my-app:ver1 .
+
+```
+**explantion**
+
+user_name/reponame   ------------> REPOSITORY
+
+discoverdevops/my-app
+
+:ver --> tagname
+
+.  --> means it says present directory 
+
+---
+
+**use this command to upload images to dockerhub**
+
+```
+docker push dockwithmurali/my-apps:tagname
+```
+
+**explantion**
+
+dockwithmurali/my-apps  ------------> REPOSITORY
+
+:tagname  --> image
+
+---
 
 ### **Searching and Pulling Images from Docker Hub**
+
 
 1. **Search for Images:**
    - Command:
