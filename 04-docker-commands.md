@@ -1,13 +1,32 @@
 Docker commands are used to interact with Docker, a popular platform for developing, shipping, and running applications using containerization. 
 Here's a list of some useful Docker commands along with their usage and examples:
 
-1. **docker run**: Run a command in a new container.
+**Displays the installed Docker version.**
+```
+docker --version
+```
+***Displays system-wide information about Docker.***
+```
+docker info
+```
+
+1. **docker run**: this command is used to creat a containe without port mapping.
    ```
    docker run <image_name>
    ```
-   Example: `docker run ubuntu`
+   Example: `docker run nginx`
 
-2. **docker pull**: Pull an image or a repository from a registry.
+### docker run -d -p 80:80 --name mynginx nginx
+
+Runs a container from a Docker image.
+
+```
+- `-d`: Run container in detached mode.
+- `-p 80:80`: Map port 80 on the host to port 80 in the container.
+- `--name mynginx`: Assign a name to the container.
+```
+
+2. **docker pull**: Pull an images or a repository from a registry.
    ```
    docker pull <image_name>
    ```
@@ -16,6 +35,7 @@ Here's a list of some useful Docker commands along with their usage and examples
 3. **docker build**: Build an image from a Dockerfile.
    ```
    docker build -t <image_name> <path_to_Dockerfile>
+   
    ```
    Example: `docker build -t my_image .`
 
@@ -54,14 +74,21 @@ Here's a list of some useful Docker commands along with their usage and examples
    docker rmi <image_name>
    ```
    Example: `docker rmi my_image`
+   
+   **use this command for delete all stoped containers and images**
+   ```
+   docker system prune --all
+   
+   ```
 
-9. **docker exec**: Run a command in a running container.
+10. **docker exec**: Run a command in a running container.
    ```
    docker exec -it <container_id> <command>
+
    ```
    Example: `docker exec -it abc123def456 bash`
 
-10. **docker-compose**: Define and run multi-container Docker applications with a YAML file.
+11. **docker-compose**: Define and run multi-container Docker applications with a YAML file.
    ```
    docker-compose up
    ```
@@ -70,6 +97,7 @@ Here's a list of some useful Docker commands along with their usage and examples
 11. **docker logs**: Fetch the logs of a container.
    ```
    docker logs <container_id>
+
    ```
    Example: `docker logs abc123def456`
 
