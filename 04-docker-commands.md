@@ -262,3 +262,342 @@ These commands cover the basics of using Docker for managing images, containers,
    Example: `docker inspect abc123def456`
 
 These are just a few commonly used Docker commands. There are many more commands and options available, which you can explore further in the Docker documentation or by using the `docker --help` command.
+
+---
+---
+
+
+# Docker Commands
+
+## Check Docker
+
+*Check Docker Version*
+```bash
+docker --version
+```
+**Purpose:** Check whether Docker is installed.
+
+### Docker Information
+```bash
+docker info
+```
+**Purpose:** Display Docker system information.
+
+### Docker Help
+```bash
+docker help
+```
+**Purpose:** Show all Docker commands.
+
+---
+
+# Docker Images
+
+## Pull an Image
+```bash
+docker pull nginx
+```
+**Purpose:** Download the Nginx image from Docker Hub.
+
+## List Images
+```bash
+docker images
+```
+**Purpose:** Display all downloaded Docker images.
+
+## Remove an Image
+```bash
+docker rmi nginx
+```
+**Purpose:** Delete the specified image.
+
+## Search an Image
+```bash
+docker search ubuntu
+```
+**Purpose:** Search images on Docker Hub.
+
+---
+
+# Docker Containers
+
+## Run a Container
+```bash
+docker run nginx
+```
+**Purpose:** Create and start a container.
+
+## Run in Background
+```bash
+docker run -d nginx
+```
+**Purpose:** Run the container in detached mode.
+
+## Run with a Name
+```bash
+docker run -d --name webserver nginx
+```
+**Purpose:** Start a container with a custom name.
+
+## Port Mapping
+```bash
+docker run -d -p 8080:80 nginx
+```
+**Purpose:** Map host port 8080 to container port 80.
+
+## Interactive Mode
+```bash
+docker run -it ubuntu bash
+```
+**Purpose:** Open a Bash terminal inside the Ubuntu container.
+
+---
+
+# View Containers
+
+## Running Containers
+```bash
+docker ps
+```
+**Purpose:** Show running containers.
+
+## All Containers
+```bash
+docker ps -a
+```
+**Purpose:** Show all containers (running and stopped).
+
+---
+
+# Start, Stop & Restart
+
+## Start
+```bash
+docker start webserver
+```
+
+## Stop
+```bash
+docker stop webserver
+```
+
+## Restart
+```bash
+docker restart webserver
+```
+
+## Pause
+```bash
+docker pause webserver
+```
+
+## Resume
+```bash
+docker unpause webserver
+```
+
+## Kill
+```bash
+docker kill webserver
+```
+
+---
+
+# Access a Running Container
+
+## Open Bash
+```bash
+docker exec -it webserver bash
+```
+
+## Open Shell
+```bash
+docker exec -it webserver sh
+```
+
+## Exit
+```bash
+exit
+```
+
+---
+
+# Logs
+
+## Show Logs
+```bash
+docker logs webserver
+```
+
+## Live Logs
+```bash
+docker logs -f webserver
+```
+
+---
+
+# Inspect
+
+## Inspect Container
+```bash
+docker inspect webserver
+```
+
+---
+
+# Copy Files
+
+## Host to Container
+```bash
+docker cp file.txt webserver:/tmp
+```
+
+## Container to Host
+```bash
+docker cp webserver:/tmp/file.txt .
+```
+
+---
+
+# Remove Containers
+
+## Remove Container
+```bash
+docker rm webserver
+```
+
+## Force Remove
+```bash
+docker rm -f webserver
+```
+
+---
+
+# Build Images
+
+## Build Image
+```bash
+docker build -t myapp .
+```
+
+## List Images
+```bash
+docker images
+```
+
+---
+
+# Docker Hub
+
+## Login
+```bash
+docker login
+```
+
+## Push Image
+```bash
+docker push username/myapp
+```
+
+## Logout
+```bash
+docker logout
+```
+
+---
+
+# Docker Volumes
+
+## Create Volume
+```bash
+docker volume create myvolume
+```
+
+## List Volumes
+```bash
+docker volume ls
+```
+
+## Inspect Volume
+```bash
+docker volume inspect myvolume
+```
+
+## Remove Volume
+```bash
+docker volume rm myvolume
+```
+
+---
+
+# Docker Networks
+
+## List Networks
+```bash
+docker network ls
+```
+
+## Create Network
+```bash
+docker network create mynetwork
+```
+
+## Connect Container
+```bash
+docker network connect mynetwork webserver
+```
+
+## Inspect Network
+```bash
+docker network inspect mynetwork
+```
+
+## Remove Network
+```bash
+docker network rm mynetwork
+```
+
+---
+
+# Cleanup
+
+## Remove Unused Containers
+```bash
+docker container prune
+```
+
+## Remove Unused Images
+```bash
+docker image prune
+```
+
+## Remove All Unused Resources
+```bash
+docker system prune -a
+```
+
+---
+
+# Important Docker Commands
+```
+1. docker pull
+2. docker run
+3. docker ps
+4. docker ps -a
+5. docker images
+6. docker exec
+7. docker logs
+8. docker stop
+9. docker start
+10. docker restart
+11. docker rm
+12. docker rmi
+13. docker build
+14. docker push
+15. docker login
+16. docker volume
+17. docker network
+18. docker inspect
+19. docker cp
+20. docker system prune
+```
