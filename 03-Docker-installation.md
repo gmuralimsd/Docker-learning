@@ -130,3 +130,13 @@ Docker version 29.1.3, build 29.1.3-0ubuntu4.1
 - [Docker Desktop for Mac](https://docs.docker.com/desktop/install/mac/)
 
 Make sure to check the official documentation for any updates or additional details that may have been released after my knowledge cutoff date.
+--- 
+ # docker basic commands 
+
+ ```
+docker --version
+docker info
+docker --help
+docker system info
+
+```
