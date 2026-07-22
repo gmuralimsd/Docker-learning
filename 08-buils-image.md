@@ -124,6 +124,15 @@ example
 
 docker push dockwithmurali/my-apps:v1
 
+---
+
+**export DH_USER="dockwithmurali"**
+
+this command is used to export our docker hub reposotory 
+
+useally DH_USER is stor the user name
+
+
 # Complete Docker Image Build Flow
 
 ```text
@@ -171,6 +180,11 @@ Runs:
 python app.py
 ```
 
+**export DH_USER="dockwithmurali"**
+
+this command is used to export our docker hub reposotory 
+
+useally DH_USER is stor the user name 
 ---
 
 # Summary
